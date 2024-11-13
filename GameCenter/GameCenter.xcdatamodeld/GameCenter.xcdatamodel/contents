@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ActivitiesLog" representedClassName="ActivitiesLog" syncable="YES">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="24B83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ActivitiesLog" representedClassName="ActivitiesLog" syncable="YES" codeGenerationType="class">
         <attribute name="activityStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="gameImage" optional="YES" attributeType="String"/>
         <attribute name="gameTitle" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <entity name="FavoriteGames" representedClassName="FavoriteGames" syncable="YES">
+    <entity name="FavoriteGames" representedClassName="FavoriteGames" syncable="YES" codeGenerationType="class">
         <attribute name="backgroundImage" optional="YES" attributeType="String"/>
         <attribute name="genres" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -15,8 +15,4 @@
         <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="released" optional="YES" attributeType="String"/>
     </entity>
-    <elements>
-        <element name="FavoriteGames" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="ActivitiesLog" positionX="-54" positionY="45" width="128" height="104"/>
-    </elements>
 </model>

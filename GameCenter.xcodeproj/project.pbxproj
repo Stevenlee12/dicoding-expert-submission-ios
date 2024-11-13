@@ -55,10 +55,6 @@
 		36B2EB6828DAA1AC00FDB0CB /* CoreDataManager+FavoriteGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB6728DAA1AC00FDB0CB /* CoreDataManager+FavoriteGame.swift */; };
 		36B2EB6A28DAA3DD00FDB0CB /* CoreDataManager+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB6928DAA3DD00FDB0CB /* CoreDataManager+Utility.swift */; };
 		36B2EB8128DABD0C00FDB0CB /* CoreDataManager+ActivityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB8028DABD0C00FDB0CB /* CoreDataManager+ActivityLog.swift */; };
-		36B2EB8628DAC17D00FDB0CB /* ActivitiesLog+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB8228DAC17D00FDB0CB /* ActivitiesLog+CoreDataClass.swift */; };
-		36B2EB8728DAC17D00FDB0CB /* ActivitiesLog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB8328DAC17D00FDB0CB /* ActivitiesLog+CoreDataProperties.swift */; };
-		36B2EB8828DAC17D00FDB0CB /* FavoriteGames+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB8428DAC17D00FDB0CB /* FavoriteGames+CoreDataClass.swift */; };
-		36B2EB8928DAC17D00FDB0CB /* FavoriteGames+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB8528DAC17D00FDB0CB /* FavoriteGames+CoreDataProperties.swift */; };
 		36B2EB8B28DAC1C700FDB0CB /* AddActivityLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB8A28DAC1C700FDB0CB /* AddActivityLogModel.swift */; };
 		36B2EB8E28DAC34100FDB0CB /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB8D28DAC34100FDB0CB /* LogCell.swift */; };
 		36B2EB9928DAE53C00FDB0CB /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2EB9828DAE53C00FDB0CB /* UserDefault.swift */; };
@@ -148,10 +144,6 @@
 		36B2EB6728DAA1AC00FDB0CB /* CoreDataManager+FavoriteGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+FavoriteGame.swift"; sourceTree = "<group>"; };
 		36B2EB6928DAA3DD00FDB0CB /* CoreDataManager+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+Utility.swift"; sourceTree = "<group>"; };
 		36B2EB8028DABD0C00FDB0CB /* CoreDataManager+ActivityLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager+ActivityLog.swift"; sourceTree = "<group>"; };
-		36B2EB8228DAC17D00FDB0CB /* ActivitiesLog+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivitiesLog+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		36B2EB8328DAC17D00FDB0CB /* ActivitiesLog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivitiesLog+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		36B2EB8428DAC17D00FDB0CB /* FavoriteGames+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteGames+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		36B2EB8528DAC17D00FDB0CB /* FavoriteGames+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteGames+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		36B2EB8A28DAC1C700FDB0CB /* AddActivityLogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityLogModel.swift; sourceTree = "<group>"; };
 		36B2EB8D28DAC34100FDB0CB /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		36B2EB9828DAE53C00FDB0CB /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
@@ -254,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				36B2EB5F28DAA0D200FDB0CB /* CoreDataManager */,
-				36B2EB5A28DAA06300FDB0CB /* CoreData */,
 				3675C29B26CCF16B009CD2B7 /* GameModel.swift */,
 				369BE79928CECF5A0020B0BA /* Genre.swift */,
 				36B6769628D2BF790099BD34 /* DetailGameModel.swift */,
@@ -413,17 +404,6 @@
 				360D5A0028D06485002B2784 /* GameCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		36B2EB5A28DAA06300FDB0CB /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				36B2EB8228DAC17D00FDB0CB /* ActivitiesLog+CoreDataClass.swift */,
-				36B2EB8328DAC17D00FDB0CB /* ActivitiesLog+CoreDataProperties.swift */,
-				36B2EB8428DAC17D00FDB0CB /* FavoriteGames+CoreDataClass.swift */,
-				36B2EB8528DAC17D00FDB0CB /* FavoriteGames+CoreDataProperties.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		36B2EB5F28DAA0D200FDB0CB /* CoreDataManager */ = {
@@ -760,7 +740,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3683AA7E2CD0944400C73C16 /* Result.swift in Sources */,
-				36B2EB8628DAC17D00FDB0CB /* ActivitiesLog+CoreDataClass.swift in Sources */,
 				360D59FB28D02C90002B2784 /* RecommendedGameCell.swift in Sources */,
 				360D59F928D028B7002B2784 /* UIColor+Extension.swift in Sources */,
 				36B91AEA2CD4B5B000058CF5 /* FetchGamesUseCase.swift in Sources */,
@@ -772,7 +751,6 @@
 				36B2EB6A28DAA3DD00FDB0CB /* CoreDataManager+Utility.swift in Sources */,
 				36B2EB9928DAE53C00FDB0CB /* UserDefault.swift in Sources */,
 				368084FA26CA43B3007D7A8B /* UIView+Extension.swift in Sources */,
-				36B2EB8928DAC17D00FDB0CB /* FavoriteGames+CoreDataProperties.swift in Sources */,
 				3675C28226CCE336009CD2B7 /* ProfileViewController.swift in Sources */,
 				3694E8AC2CD1C62900FAAE46 /* MockNetworkManager.swift in Sources */,
 				36B676A028D2DACC0099BD34 /* StarView.swift in Sources */,
@@ -795,7 +773,6 @@
 				36B75B782CD0D7F700AB381C /* ProfileViewModel.swift in Sources */,
 				36044B0228D0177800567CDF /* HeaderView.swift in Sources */,
 				36B91AE42CD4971A00058CF5 /* FetchGamesUseCaseProtocol.swift in Sources */,
-				36B2EB8828DAC17D00FDB0CB /* FavoriteGames+CoreDataClass.swift in Sources */,
 				36B6769E28D2D0FF0099BD34 /* RatingView.swift in Sources */,
 				369BE79C28CEDFA60020B0BA /* UIAppearance+Extension.swift in Sources */,
 				368729FF26CE0D7A00701538 /* NetworkManager.swift in Sources */,
@@ -820,7 +797,6 @@
 				360D59F328D02687002B2784 /* CustomViewWithCollectionView.swift in Sources */,
 				3675C29C26CCF16B009CD2B7 /* GameModel.swift in Sources */,
 				36B2EBA028DAF2DA00FDB0CB /* TextFieldView.swift in Sources */,
-				36B2EB8728DAC17D00FDB0CB /* ActivitiesLog+CoreDataProperties.swift in Sources */,
 				3680850226CA4569007D7A8B /* UIWindow+Extension.swift in Sources */,
 				36B75B752CD0D26800AB381C /* HomeViewModel.swift in Sources */,
 				36B2EB9C28DAF09F00FDB0CB /* EditProfileView.swift in Sources */,
