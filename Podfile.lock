@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.9.1)
+  - Kingfisher (7.12.0)
+  - lottie-ios (4.5.0)
+  - SnapKit (5.7.1)
+  - SteviaLayout (5.1.2)
+  - SwiftLint (0.57.0)
+  - Swinject (2.9.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.5)
+  - Kingfisher
+  - lottie-ios
+  - SnapKit
+  - SteviaLayout
+  - SwiftLint
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - lottie-ios
+    - SnapKit
+    - SteviaLayout
+    - SwiftLint
+    - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
+  lottie-ios: a881093fab623c467d3bce374367755c272bdd59
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SteviaLayout: 05424e528d643657d39ce72c786e4adf13cfc5f2
+  SwiftLint: eb47480d47c982481592c195c221d11013a679cc
+  Swinject: a827d508c6270da03ec74e558e728917a888fa9b
+
+PODFILE CHECKSUM: 1d6e55178e9257dc5ca6c5716c715ca8aa4b0fe4
+
+COCOAPODS: 1.15.2
