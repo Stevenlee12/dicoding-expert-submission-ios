@@ -207,15 +207,7 @@
 			mainGroup = 368084D026CA3BCF007D7A8B;
 			packageReferences = (
 				36739F7E2D0BDD35003BAA0F /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
-				36C2794A2D0C2BA900384D29 /* XCLocalSwiftPackageReference "Modules/GCCommon" */,
-				36C2794B2D0C2BB500384D29 /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */,
-				36C2794D2D0C2BD000384D29 /* XCLocalSwiftPackageReference "Modules/GCFavoriteGamesPage" */,
-				36C2794E2D0C2BE900384D29 /* XCLocalSwiftPackageReference "Modules/GCHomePage" */,
-				36C2794F2D0C2BF500384D29 /* XCLocalSwiftPackageReference "Modules/GCGames" */,
-				36C279502D0C2C0100384D29 /* XCLocalSwiftPackageReference "Modules/GCProfile" */,
-				36C279512D0C2C0C00384D29 /* XCLocalSwiftPackageReference "Modules/GCProfilePage" */,
-				36C279522D0C2C1500384D29 /* XCLocalSwiftPackageReference "Modules/GCSearchPage" */,
-				360C9BA72D0C30E400A8E0CC /* XCLocalSwiftPackageReference "Modules/GCAPI" */,
+				3674FDA32D0C365B00964B3C /* XCLocalSwiftPackageReference "Modules/GCAPI" */,
 			);
 			productRefGroup = 368084DA26CA3BCF007D7A8B /* Products */;
 			projectDirPath = "";
@@ -558,17 +550,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		360C9BA72D0C30E400A8E0CC /* XCLocalSwiftPackageReference "Modules/GCAPI" */ = {
+		3674FDA32D0C365B00964B3C /* XCLocalSwiftPackageReference "Modules/GCAPI" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Modules/GCAPI;
-		};
-		36C2794A2D0C2BA900384D29 /* XCLocalSwiftPackageReference "Modules/GCCommon" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/GCCommon;
-		};
-		36C2794B2D0C2BB500384D29 /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/GCDetailGame;
 		};
 		36C2794D2D0C2BD000384D29 /* XCLocalSwiftPackageReference "Modules/GCFavoriteGamesPage" */ = {
 			isa = XCLocalSwiftPackageReference;
@@ -577,14 +561,6 @@
 		36C2794E2D0C2BE900384D29 /* XCLocalSwiftPackageReference "Modules/GCHomePage" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Modules/GCHomePage;
-		};
-		36C2794F2D0C2BF500384D29 /* XCLocalSwiftPackageReference "Modules/GCGames" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/GCGames;
-		};
-		36C279502D0C2C0100384D29 /* XCLocalSwiftPackageReference "Modules/GCProfile" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/GCProfile;
 		};
 		36C279512D0C2C0C00384D29 /* XCLocalSwiftPackageReference "Modules/GCProfilePage" */ = {
 			isa = XCLocalSwiftPackageReference;
