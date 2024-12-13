@@ -7,9 +7,6 @@
 
 import UIKit
 
-import GCHomePage
-import GCSearchPage
-
 class TabbarController: UITabBarController {
     static var instance = TabbarController()
 

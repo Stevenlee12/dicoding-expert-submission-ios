@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		368084E926CA3BD3007D7A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368084E726CA3BD3007D7A8B /* LaunchScreen.storyboard */; };
 		36A2A9AD2D0AA0EF007F34F9 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2A9AC2D0AA0EF007F34F9 /* Injection.swift */; };
 		36B75B982CD0DD4900AB381C /* GameCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B75B962CD0DD4900AB381C /* GameCenterTests.swift */; };
+		36C279542D0C2C2F00384D29 /* GCHomePage in Frameworks */ = {isa = PBXBuildFile; productRef = 36C279532D0C2C2F00384D29 /* GCHomePage */; };
+		36C279582D0C2C3E00384D29 /* GCFavoriteGamesPage in Frameworks */ = {isa = PBXBuildFile; productRef = 36C279572D0C2C3E00384D29 /* GCFavoriteGamesPage */; };
+		36C2795A2D0C2C4200384D29 /* GCProfilePage in Frameworks */ = {isa = PBXBuildFile; productRef = 36C279592D0C2C4200384D29 /* GCProfilePage */; };
+		36C2795C2D0C2C4600384D29 /* GCSearchPage in Frameworks */ = {isa = PBXBuildFile; productRef = 36C2795B2D0C2C4600384D29 /* GCSearchPage */; };
 		36F779C72D014CDA0082CF97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36F779C52D014CDA0082CF97 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C2795A2D0C2C4200384D29 /* GCProfilePage in Frameworks */,
+				36C2795C2D0C2C4600384D29 /* GCSearchPage in Frameworks */,
+				36C279542D0C2C2F00384D29 /* GCHomePage in Frameworks */,
+				36C279582D0C2C3E00384D29 /* GCFavoriteGamesPage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +207,15 @@
 			mainGroup = 368084D026CA3BCF007D7A8B;
 			packageReferences = (
 				36739F7E2D0BDD35003BAA0F /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				36C279492D0C2B7A00384D29 /* XCLocalSwiftPackageReference "Modules/GCAPI" */,
+				36C2794A2D0C2BA900384D29 /* XCLocalSwiftPackageReference "Modules/GCCommon" */,
+				36C2794B2D0C2BB500384D29 /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */,
+				36C2794D2D0C2BD000384D29 /* XCLocalSwiftPackageReference "Modules/GCFavoriteGamesPage" */,
+				36C2794E2D0C2BE900384D29 /* XCLocalSwiftPackageReference "Modules/GCHomePage" */,
+				36C2794F2D0C2BF500384D29 /* XCLocalSwiftPackageReference "Modules/GCGames" */,
+				36C279502D0C2C0100384D29 /* XCLocalSwiftPackageReference "Modules/GCProfile" */,
+				36C279512D0C2C0C00384D29 /* XCLocalSwiftPackageReference "Modules/GCProfilePage" */,
+				36C279522D0C2C1500384D29 /* XCLocalSwiftPackageReference "Modules/GCSearchPage" */,
 			);
 			productRefGroup = 368084DA26CA3BCF007D7A8B /* Products */;
 			projectDirPath = "";
@@ -540,6 +557,45 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		36C279492D0C2B7A00384D29 /* XCLocalSwiftPackageReference "Modules/GCAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCAPI;
+		};
+		36C2794A2D0C2BA900384D29 /* XCLocalSwiftPackageReference "Modules/GCCommon" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCCommon;
+		};
+		36C2794B2D0C2BB500384D29 /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCDetailGame;
+		};
+		36C2794D2D0C2BD000384D29 /* XCLocalSwiftPackageReference "Modules/GCFavoriteGamesPage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCFavoriteGamesPage;
+		};
+		36C2794E2D0C2BE900384D29 /* XCLocalSwiftPackageReference "Modules/GCHomePage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCHomePage;
+		};
+		36C2794F2D0C2BF500384D29 /* XCLocalSwiftPackageReference "Modules/GCGames" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCGames;
+		};
+		36C279502D0C2C0100384D29 /* XCLocalSwiftPackageReference "Modules/GCProfile" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCProfile;
+		};
+		36C279512D0C2C0C00384D29 /* XCLocalSwiftPackageReference "Modules/GCProfilePage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCProfilePage;
+		};
+		36C279522D0C2C1500384D29 /* XCLocalSwiftPackageReference "Modules/GCSearchPage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCSearchPage;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		36739F7E2D0BDD35003BAA0F /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -550,6 +606,29 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36C279532D0C2C2F00384D29 /* GCHomePage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36C2794E2D0C2BE900384D29 /* XCLocalSwiftPackageReference "Modules/GCHomePage" */;
+			productName = GCHomePage;
+		};
+		36C279572D0C2C3E00384D29 /* GCFavoriteGamesPage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36C2794D2D0C2BD000384D29 /* XCLocalSwiftPackageReference "Modules/GCFavoriteGamesPage" */;
+			productName = GCFavoriteGamesPage;
+		};
+		36C279592D0C2C4200384D29 /* GCProfilePage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36C279512D0C2C0C00384D29 /* XCLocalSwiftPackageReference "Modules/GCProfilePage" */;
+			productName = GCProfilePage;
+		};
+		36C2795B2D0C2C4600384D29 /* GCSearchPage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36C279522D0C2C1500384D29 /* XCLocalSwiftPackageReference "Modules/GCSearchPage" */;
+			productName = GCSearchPage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 368084D126CA3BCF007D7A8B /* Project object */;
 }
