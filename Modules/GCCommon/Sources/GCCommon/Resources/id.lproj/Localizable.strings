@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  GCCommon
+
+  Created by Steven Lie on 05/12/24.
+  
+*/
+
+"HTTP_ERROR_EXPLANATION" = "Terjadi kesalahan saat memproses permintaan Anda.";
+"CUSTOM_NETWORK_ERROR_EXPLANATION" = "Ada masalah dengan permintaan Anda.";
+"AF_PROCESS_ERROR" = "Terjadi kesalahan saat menghubungi API Rawg.io.";
+"AF_DECODER_FAIL" = "Oops! Sepertinya data dalam format yang salah.";
+"LOCAL_STORAGE_EMPTY" = "Data tidak ditemukan!";

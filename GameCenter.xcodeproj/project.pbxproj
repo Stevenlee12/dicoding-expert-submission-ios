@@ -208,6 +208,7 @@
 			packageReferences = (
 				36739F7E2D0BDD35003BAA0F /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 				3674FDA32D0C365B00964B3C /* XCLocalSwiftPackageReference "Modules/GCAPI" */,
+				36835B532D0C396A0057C389 /* XCLocalSwiftPackageReference "Modules/GCCommon" */,
 			);
 			productRefGroup = 368084DA26CA3BCF007D7A8B /* Products */;
 			projectDirPath = "";
@@ -553,6 +554,10 @@
 		3674FDA32D0C365B00964B3C /* XCLocalSwiftPackageReference "Modules/GCAPI" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Modules/GCAPI;
+		};
+		36835B532D0C396A0057C389 /* XCLocalSwiftPackageReference "Modules/GCCommon" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCCommon;
 		};
 		36C2794D2D0C2BD000384D29 /* XCLocalSwiftPackageReference "Modules/GCFavoriteGamesPage" */ = {
 			isa = XCLocalSwiftPackageReference;
