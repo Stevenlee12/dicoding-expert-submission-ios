@@ -7,6 +7,9 @@
 
 import UIKit
 
+import GCHomePage
+import GCSearchPage
+
 class TabbarController: UITabBarController {
     static var instance = TabbarController()
 
@@ -40,28 +43,28 @@ class TabbarController: UITabBarController {
 
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
 
-        let homeVC = StyledNavigationController(rootViewController: HomeViewController())
+        let homeVC = StyledNavigationController(rootViewController: Injection.shared.makeHomeViewController())
         homeVC.tabBarItem =  UITabBarItem(
             title: "Home",
             image: UIImage(systemName: "gamecontroller.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16)),
             selectedImage: UIImage(systemName: "gamecontroller.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16))
         )
 
-        let searchVC = StyledNavigationController(rootViewController: SearchViewController())
+        let searchVC = StyledNavigationController(rootViewController: Injection.shared.makeSearchViewController())
         searchVC.tabBarItem = UITabBarItem(
             title: "Search",
             image: UIImage(systemName: "magnifyingglass", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16)),
             selectedImage: UIImage(systemName: "magnifyingglass", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16))
         )
 
-        let favoriteVC = StyledNavigationController(rootViewController: FavoriteViewController())
+        let favoriteVC = StyledNavigationController(rootViewController: Injection.shared.makeFavoriteGamesViewController())
         favoriteVC.tabBarItem = UITabBarItem(
             title: "Favorite",
             image: UIImage(systemName: "bookmark.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16)),
             selectedImage: UIImage(systemName: "bookmark.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16))
         )
 
-        let profileVC = StyledNavigationController(rootViewController: ProfileViewController())
+        let profileVC = StyledNavigationController(rootViewController: Injection.shared.makeProfileViewController())
         profileVC.tabBarItem = UITabBarItem(
             title: "Profile",
             image: UIImage(systemName: "person.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 16)),

@@ -22,14 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         setupRootViewController()
-        
-        if UserDefault.name.load() as? String == nil {
-            UserDefault.name.save(value: "Steven Lie")
-        }
-        
-        if UserDefault.email.load() as? String == nil {
-            UserDefault.email.save(value: "stevenliee1206@gmail.com")
-        }
 
         return true
     }
