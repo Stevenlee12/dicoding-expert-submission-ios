@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		360942432D0AD46F0087AF59 /* GCFavoriteGamesPage in Frameworks */ = {isa = PBXBuildFile; productRef = 360942422D0AD46F0087AF59 /* GCFavoriteGamesPage */; };
-		361AFFD72D07D1ED0093CEB8 /* GCHomePage in Frameworks */ = {isa = PBXBuildFile; productRef = 361AFFD62D07D1ED0093CEB8 /* GCHomePage */; };
 		3675C26626CC9D58009CD2B7 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3675C26526CC9D58009CD2B7 /* BaseRouter.swift */; };
 		368084DD26CA3BCF007D7A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368084DC26CA3BCF007D7A8B /* AppDelegate.swift */; };
 		368084E626CA3BD3007D7A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368084E526CA3BD3007D7A8B /* Assets.xcassets */; };
 		368084E926CA3BD3007D7A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368084E726CA3BD3007D7A8B /* LaunchScreen.storyboard */; };
 		36A2A9AD2D0AA0EF007F34F9 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2A9AC2D0AA0EF007F34F9 /* Injection.swift */; };
-		36A75A902D0BCCB900604B64 /* GCProfilePage in Frameworks */ = {isa = PBXBuildFile; productRef = 36A75A8F2D0BCCB900604B64 /* GCProfilePage */; };
 		36B75B982CD0DD4900AB381C /* GameCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B75B962CD0DD4900AB381C /* GameCenterTests.swift */; };
-		36DD8C1C2D0A8F56001CF269 /* GCSearchPage in Frameworks */ = {isa = PBXBuildFile; productRef = 36DD8C1B2D0A8F56001CF269 /* GCSearchPage */; };
 		36F779C72D014CDA0082CF97 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36F779C52D014CDA0082CF97 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -31,19 +27,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		360942412D0AD2440087AF59 /* GCFavoriteGamesPage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GCFavoriteGamesPage; path = Modules/GCFavoriteGamesPage; sourceTree = "<group>"; };
-		361315122D0A8B4B00200521 /* GCSearchPage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GCSearchPage; path = Modules/GCSearchPage; sourceTree = "<group>"; };
-		361C4D4E2D06C572000020E4 /* GCHomePage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GCHomePage; path = Modules/GCHomePage; sourceTree = "<group>"; };
-		366AE4E82D09724300971D0E /* GCDetailGamePage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GCDetailGamePage; path = Modules/GCDetailGamePage; sourceTree = "<group>"; };
 		3675C26526CC9D58009CD2B7 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		368084D926CA3BCF007D7A8B /* GameCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368084DC26CA3BCF007D7A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368084E526CA3BD3007D7A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		368084E826CA3BD3007D7A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		368084EA26CA3BD3007D7A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3692BF512D096EB900EBA790 /* GCDetailGame */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GCDetailGame; path = Modules/GCDetailGame; sourceTree = "<group>"; };
 		36A2A9AC2D0AA0EF007F34F9 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
-		36A75A8E2D0BC9FA00604B64 /* GCProfilePage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GCProfilePage; path = Modules/GCProfilePage; sourceTree = "<group>"; };
 		36B75B8D2CD0DD3500AB381C /* GameCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B75B962CD0DD4900AB381C /* GameCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterTests.swift; sourceTree = "<group>"; };
 		36F779C62D014CDA0082CF97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -55,10 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DD8C1C2D0A8F56001CF269 /* GCSearchPage in Frameworks */,
-				361AFFD72D07D1ED0093CEB8 /* GCHomePage in Frameworks */,
-				360942432D0AD46F0087AF59 /* GCFavoriteGamesPage in Frameworks */,
-				36A75A902D0BCCB900604B64 /* GCProfilePage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +69,6 @@
 		368084D026CA3BCF007D7A8B = {
 			isa = PBXGroup;
 			children = (
-				36A75A8E2D0BC9FA00604B64 /* GCProfilePage */,
-				360942412D0AD2440087AF59 /* GCFavoriteGamesPage */,
-				361315122D0A8B4B00200521 /* GCSearchPage */,
-				366AE4E82D09724300971D0E /* GCDetailGamePage */,
-				3692BF512D096EB900EBA790 /* GCDetailGame */,
-				361C4D4E2D06C572000020E4 /* GCHomePage */,
 				368084DB26CA3BCF007D7A8B /* GameCenter */,
 				36B75B972CD0DD4900AB381C /* GameCenterTests */,
 				368084DA26CA3BCF007D7A8B /* Products */,
@@ -570,25 +550,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		360942422D0AD46F0087AF59 /* GCFavoriteGamesPage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GCFavoriteGamesPage;
-		};
-		361AFFD62D07D1ED0093CEB8 /* GCHomePage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GCHomePage;
-		};
-		36A75A8F2D0BCCB900604B64 /* GCProfilePage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GCProfilePage;
-		};
-		36DD8C1B2D0A8F56001CF269 /* GCSearchPage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GCSearchPage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 368084D126CA3BCF007D7A8B /* Project object */;
 }
