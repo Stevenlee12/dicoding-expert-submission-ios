@@ -40,6 +40,7 @@
 		36A2A9AC2D0AA0EF007F34F9 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		36B75B8D2CD0DD3500AB381C /* GameCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B75B962CD0DD4900AB381C /* GameCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterTests.swift; sourceTree = "<group>"; };
+		36B851522D0D1FC000E09BFC /* GCHomePage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = GCHomePage; path = Modules/GCHomePage; sourceTree = "<group>"; };
 		36F779C62D014CDA0082CF97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36F779C92D014CED0082CF97 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +78,7 @@
 		368084D026CA3BCF007D7A8B = {
 			isa = PBXGroup;
 			children = (
+				36B851522D0D1FC000E09BFC /* GCHomePage */,
 				368084DB26CA3BCF007D7A8B /* GameCenter */,
 				36B75B972CD0DD4900AB381C /* GameCenterTests */,
 				368084DA26CA3BCF007D7A8B /* Products */,
