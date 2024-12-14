@@ -3,13 +3,9 @@ workflows:
     name: iOS Debug with Quality Checks
     environment:
       xcode: latest
-      cocoapods: default
       vars:
         XCODE_SCHEME: "GameCenter" # Replace with your actual scheme name
     scripts:
-      - name: Install CocoaPods
-        script: |
-          pod install
       - name: Run tests with code coverage
         script: |
           xcodebuild \
@@ -29,8 +25,12 @@ workflows:
             > code_coverage/coverage.json
       - name: Check code style
         script: |
-          brew install swiftlint || echo "SwiftLint already installed"
-          swiftlint
+          # Ensure SwiftLintPlugin is used correctly
+          echo "SwiftLint is integrated via SwiftLintPlugin in SPM."
+          echo "To run SwiftLint, use the following command during development:"
+          echo "swift run swiftlint --path ./"
+          # Optional: Include SwiftLint checks in CI if required
+          swift run swiftlint --strict
       - name: Check vulnerabilities
         script: |
           brew install trivy || echo "Trivy already installed"
