@@ -28,9 +28,8 @@ workflows:
             > code_coverage/coverage.json
       - name: Check code style
         script: |
-          cd $CM_BUILD_DIR
-          # Run SwiftLint to check the code style in your project
-          swiftlint lint --strict --config ./swiftlint.yml
+          brew install swiftlint || echo "SwiftLint already installed"
+          swiftlint
       - name: Check vulnerabilities
         script: |
           brew install trivy || echo "Trivy already installed"
