@@ -9,14 +9,14 @@ workflows:
       - name: Run tests with code coverage
         script: |
           xcodebuild \
-            -workspace "GameCenter.xcworkspace" \
-            -scheme "$XCODE_SCHEME" \
-            -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
-            clean build test \
-            -enableCodeCoverage YES \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO
+          -project "GameCenter.xcodeproj" \
+          -scheme "$XCODE_SCHEME" \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
+          clean build test \
+          -enableCodeCoverage YES \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO
       - name: Generate code coverage report
         script: |
           mkdir -p code_coverage
