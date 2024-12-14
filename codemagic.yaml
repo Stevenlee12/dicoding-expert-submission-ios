@@ -1,29 +1,52 @@
 workflows:
-  ios-project-debug: # workflow ID
-    name: iOS debug # workflow name
+  ios-project-debug:
+    name: iOS Debug with Quality Checks
     environment:
       xcode: latest
       cocoapods: default
       vars:
-          XCODE_PROJECT: "GameCenter.xcodeproj" # Isikan nama project Anda.
-          XCODE_SCHEME: "GameCenter" # Isikan nama scheme project Anda.
+        XCODE_SCHEME: "GameCenter" # Replace with your actual scheme name
     scripts:
-      - name: Run tests
+      - name: Install CocoaPods
+        script: |
+          pod install
+      - name: Run tests with code coverage
         script: |
           xcodebuild \
-          -project "$XCODE_PROJECT" \
-          -scheme "$XCODE_SCHEME" \
-          -sdk iphonesimulator \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
-          clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+            -workspace "GameCenter.xcworkspace" \
+            -scheme "$XCODE_SCHEME" \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
+            clean build test \
+            -enableCodeCoverage YES \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
+      - name: Generate code coverage report
+        script: |
+          mkdir -p code_coverage
+          xcrun xccov view --report --json \
+            $HOME/Library/Developer/Xcode/DerivedData/**/Logs/Test/*.xcresult \
+            > code_coverage/coverage.json
+      - name: Check code style
+        script: |
+          brew install swiftlint || echo "SwiftLint already installed"
+          swiftlint
+      - name: Check vulnerabilities
+        script: |
+          brew install trivy || echo "Trivy already installed"
+          trivy fs . --exit-code 1 --severity CRITICAL
       - name: Build debug app
         script: |
-          xcodebuild build -project "$XCODE_PROJECT" \
-          -scheme "$XCODE_SCHEME" \
-          CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          xcodebuild \
+            -workspace "GameCenter.xcworkspace" \
+            -scheme "$XCODE_SCHEME" \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - code_coverage/coverage.json
     publishing:
       email:
         recipients:
-            - stevenliee1206@gmail.com
+          - stevenliee1206@gmail.com
