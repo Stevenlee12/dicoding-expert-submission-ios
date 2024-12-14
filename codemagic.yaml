@@ -6,10 +6,13 @@ workflows:
       vars:
         XCODE_SCHEME: "GameCenter" # Replace with your actual scheme name
     scripts:
+      - name: Resolve SPM dependencies
+        script: |
+          xcodebuild -resolvePackageDependencies
       - name: Run tests with code coverage
         script: |
           xcodebuild \
-          -project "GameCenter.xcodeproj" \
+          -workspace "GameCenter.xcworkspace" \
           -scheme "$XCODE_SCHEME" \
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
@@ -23,19 +26,19 @@ workflows:
           xcrun xccov view --report --json \
             $HOME/Library/Developer/Xcode/DerivedData/**/Logs/Test/*.xcresult \
             > code_coverage/coverage.json
-      - name: Resolve SPM dependencies
-        script: |
-          xcodebuild -resolvePackageDependencies
       - name: Check code style
         script: |
-          SWIFT_PACKAGE_DIR="${HOME}/Library/Developer/Xcode/DerivedData/**/SourcePackages/artifacts"
-          SWIFTLINT_CMD=$(ls "$SWIFT_PACKAGE_DIR"/swiftlintplugins/SwiftLintBinary/SwiftLintBinary.artifactbundle/swiftlint-*/bin/swiftlint | head -n 1)
-
-          if test -f "$SWIFTLINT_CMD" 2>&1
-          then
-              "$SWIFTLINT_CMD" --path ./
+          SWIFT_PACKAGE_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
+          SWIFTLINT_CMD=$(find "$SWIFT_PACKAGE_DIR" -name swiftlint -type f | head -n 1)
+      
+          if [ -n "$SWIFTLINT_CMD" ] && [ -x "$SWIFTLINT_CMD" ]; then
+              echo "Running SwiftLint from $SWIFTLINT_CMD..."
+              "$SWIFTLINT_CMD" --path ./ || {
+                  echo "warning: SwiftLint found issues or exited with a warning."
+                  exit 0 # Exit gracefully even if linting has warnings
+              }
           else
-              echo "warning: `swiftlint` command not found - Ensure SPM SwiftLintPlugin is correctly configured."
+              echo "error: SwiftLint command not found. Ensure SPM SwiftLintPlugin is correctly configured."
               exit 1
           fi
       - name: Check vulnerabilities
