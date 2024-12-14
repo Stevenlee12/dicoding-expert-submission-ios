@@ -34,7 +34,7 @@ workflows:
         script: |
           brew install trivy || echo "Trivy already installed"
           trivy fs . --exit-code 1 --severity CRITICAL
-       - name: Build debug app
+      - name: Build debug app
         script: |
           xcodebuild build -project "$XCODE_PROJECT" \
           -scheme "$XCODE_SCHEME" \
