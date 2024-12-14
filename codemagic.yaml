@@ -34,14 +34,11 @@ workflows:
         script: |
           brew install trivy || echo "Trivy already installed"
           trivy fs . --exit-code 1 --severity CRITICAL
-      - name: Build debug app
+       - name: Build debug app
         script: |
-          xcodebuild \
-            -workspace "GameCenter.xcodeproj" \
-            -scheme "$XCODE_SCHEME" \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO
+          xcodebuild build -project "$XCODE_PROJECT" \
+          -scheme "$XCODE_SCHEME" \
+          CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - code_coverage/coverage.json
