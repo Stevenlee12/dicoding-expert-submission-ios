@@ -1,15 +1,6 @@
 {
-  "originHash" : "04b6ba2d7c6ad7921d46c1f9f1965f17edaca2c761072c158d0a09c237d0ce60",
+  "originHash" : "c941bd4023dd6dab0628a16d3eac4f2d4812a4e6fb2aa48a3dc07d9d549f274b",
   "pins" : [
-    {
-      "identity" : "alamofire",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire.git",
-      "state" : {
-        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
-        "version" : "5.10.2"
-      }
-    },
     {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
@@ -44,15 +35,6 @@
       "state" : {
         "revision" : "1c2eaefee104b390ab4860b8e510dff51182532b",
         "version" : "6.1.0"
-      }
-    },
-    {
-      "identity" : "swiftlintplugins",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SimplyDanny/SwiftLintPlugins",
-      "state" : {
-        "revision" : "f9731bef175c3eea3a0ca960f1be78fcc2bc7853",
-        "version" : "0.57.1"
       }
     }
   ],
