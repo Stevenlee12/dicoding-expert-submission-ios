@@ -28,19 +28,9 @@ workflows:
             > code_coverage/coverage.json
       - name: Check code style
         script: |
-          SWIFT_PACKAGE_DIR="${BUILD_DIR%Build/*}SourcePackages/artifacts"
-          SWIFTLINT_CMD=$(find "$SWIFT_PACKAGE_DIR" -name swiftlint -type f | head -n 1)
-      
-          if [ -n "$SWIFTLINT_CMD" ] && [ -x "$SWIFTLINT_CMD" ]; then
-              echo "Running SwiftLint from $SWIFTLINT_CMD..."
-              "$SWIFTLINT_CMD" --path ./ || {
-                  echo "warning: SwiftLint found issues or exited with a warning."
-                  exit 0 # Exit gracefully even if linting has warnings
-              }
-          else
-              echo "error: SwiftLint command not found. Ensure SPM SwiftLintPlugin is correctly configured."
-              exit 1
-          fi
+          cd $CM_BUILD_DIR
+          # Run SwiftLint to check the code style in your project
+          swiftlint lint --strict --config ./swiftlint.yml
       - name: Check vulnerabilities
         script: |
           brew install trivy || echo "Trivy already installed"
