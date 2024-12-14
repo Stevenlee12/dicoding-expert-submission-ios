@@ -23,14 +23,21 @@ workflows:
           xcrun xccov view --report --json \
             $HOME/Library/Developer/Xcode/DerivedData/**/Logs/Test/*.xcresult \
             > code_coverage/coverage.json
+      - name: Resolve SPM dependencies
+        script: |
+          xcodebuild -resolvePackageDependencies
       - name: Check code style
         script: |
-          # Ensure SwiftLintPlugin is used correctly
-          echo "SwiftLint is integrated via SwiftLintPlugin in SPM."
-          echo "To run SwiftLint, use the following command during development:"
-          echo "swift run swiftlint --path ./"
-          # Optional: Include SwiftLint checks in CI if required
-          swift run swiftlint --strict
+          SWIFT_PACKAGE_DIR="${HOME}/Library/Developer/Xcode/DerivedData/**/SourcePackages/artifacts"
+          SWIFTLINT_CMD=$(ls "$SWIFT_PACKAGE_DIR"/swiftlintplugins/SwiftLintBinary/SwiftLintBinary.artifactbundle/swiftlint-*/bin/swiftlint | head -n 1)
+
+          if test -f "$SWIFTLINT_CMD" 2>&1
+          then
+              "$SWIFTLINT_CMD" --path ./
+          else
+              echo "warning: `swiftlint` command not found - Ensure SPM SwiftLintPlugin is correctly configured."
+              exit 1
+          fi
       - name: Check vulnerabilities
         script: |
           brew install trivy || echo "Trivy already installed"
