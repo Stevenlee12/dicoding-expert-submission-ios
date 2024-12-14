@@ -37,7 +37,7 @@ workflows:
       - name: Build debug app
         script: |
           xcodebuild \
-            -workspace "GameCenter.xcworkspace" \
+            -workspace "GameCenter.xcodeproj" \
             -scheme "$XCODE_SCHEME" \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
