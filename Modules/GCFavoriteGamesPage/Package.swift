@@ -4,33 +4,35 @@
 import PackageDescription
 
 let package = Package(
-    name: "GCDetailGame",
+    name: "GCFavoriteGamesPage",
     platforms: [.iOS(.v16), .macOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "GCDetailGame",
-            targets: ["GCDetailGame"])
+            name: "GCFavoriteGamesPage",
+            targets: ["GCFavoriteGamesPage"])
     ],
     dependencies: [
-        .package(path: "../GCAPI"),
-        .package(path: "../GCCommon"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.4.0"))
+        .package(name: "GCCommon", path: "../GCCommon"),
+        .package(name: "GCGames", path: "../GCGames"),
+        .package(name: "GCDetailGamePage", path: "../GCDetailGamePage"),
+        .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1"))
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "GCDetailGame",
+            name: "GCFavoriteGamesPage",
             dependencies: [
-                "GCAPI",
                 "GCCommon",
-                .product(name: "Alamofire", package: "Alamofire")
+                "GCGames",
+                "GCDetailGamePage",
+                .product(name: "SnapKit", package: "SnapKit")
             ]
         ),
         .testTarget(
-            name: "GCDetailGameTests",
-            dependencies: ["GCDetailGame"]
+            name: "GCFavoriteGamesPageTests",
+            dependencies: ["GCFavoriteGamesPage"]
         )
     ]
 )

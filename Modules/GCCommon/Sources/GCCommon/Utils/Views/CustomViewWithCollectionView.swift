@@ -160,4 +160,3 @@ extension CustomViewWithCollectionView {
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
 }
-

@@ -4,33 +4,30 @@
 import PackageDescription
 
 let package = Package(
-    name: "GCDetailGame",
+    name: "GCProfilePage",
     platforms: [.iOS(.v16), .macOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "GCDetailGame",
-            targets: ["GCDetailGame"])
+            name: "GCProfilePage",
+            targets: ["GCProfilePage"])
     ],
     dependencies: [
-        .package(path: "../GCAPI"),
-        .package(path: "../GCCommon"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.4.0"))
+        .package(name: "GCCommon", path: "../GCCommon"),
+        .package(name: "GCProfile", path: "../GCProfile")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "GCDetailGame",
+            name: "GCProfilePage",
             dependencies: [
-                "GCAPI",
-                "GCCommon",
-                .product(name: "Alamofire", package: "Alamofire")
-            ]
-        ),
+              "GCCommon",
+              "GCProfile"
+            ]),
         .testTarget(
-            name: "GCDetailGameTests",
-            dependencies: ["GCDetailGame"]
+            name: "GCProfilePageTests",
+            dependencies: ["GCProfilePage"]
         )
     ]
 )

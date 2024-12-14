@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(path: "../GCAPI"),
         .package(path: "../GCCommon"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.4.0"))
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.4.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
