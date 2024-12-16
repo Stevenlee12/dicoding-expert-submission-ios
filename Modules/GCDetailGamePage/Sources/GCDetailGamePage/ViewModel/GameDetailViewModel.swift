@@ -9,8 +9,8 @@ import Foundation
 import Alamofire
 import Combine
 
-import GCCommon
 import GCDetailGame
+import GCCommon
 
 public final class GameDetailViewModel: ObservableObject {
     @Published var detailGameResult: Result<DetailGameModel>? = .loading
@@ -47,7 +47,7 @@ public final class GameDetailViewModel: ObservableObject {
     func addActivityLog(activityStatus: Int) {
         guard let data = detailGame else { return }
         
-        let logModel = AddActivityLogModel(
+        let logModel = ActivityLogModel(
             id: UUID().uuidString.hash,
             gameImage: data.backgroundImage ?? "",
             activityStatus: activityStatus,
@@ -64,7 +64,7 @@ public final class GameDetailViewModel: ObservableObject {
         let genres = data.genres ?? [GenreModel]()
         let gameGenres = genres.map({ $0.name ?? "" }).joined(separator: ", ")
         
-        let model = AddFavoriteGameModel(
+        let model = FavoriteGameModel(
             id: data.id,
             name: data.name ?? "",
             released: data.released ?? "",

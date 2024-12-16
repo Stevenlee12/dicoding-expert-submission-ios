@@ -14,9 +14,9 @@ public typealias DetailGameResult = AnyPublisher<DetailGameModel, Error>
 
 public protocol DetailGameRepositoryProtocol {
     func fetchGameById(id: Int) -> DetailGameResult
-    func addGameToFavorite(_ model: AddFavoriteGameModel)
+    func addGameToFavorite(_ model: FavoriteGameModel)
     func removeFavoriteGame(byID id: Int)
-    func createActivityLog(_ model: AddActivityLogModel)
+    func createActivityLog(_ model: ActivityLogModel)
     func isFavoriteGameExist(id: Int) -> Bool
 }
 
@@ -52,7 +52,7 @@ extension DetailGameRepository: @preconcurrency DetailGameRepositoryProtocol {
     }
     
     @MainActor
-    public func addGameToFavorite(_ model: AddFavoriteGameModel) {
+    public func addGameToFavorite(_ model: FavoriteGameModel) {
         return remote.executeAddGameToFavorites(model)
     }
     
@@ -62,7 +62,7 @@ extension DetailGameRepository: @preconcurrency DetailGameRepositoryProtocol {
     }
     
     @MainActor
-    public func createActivityLog(_ model: AddActivityLogModel) {
+    public func createActivityLog(_ model: ActivityLogModel) {
         return remote.executeAddActivityLog(model)
     }
     

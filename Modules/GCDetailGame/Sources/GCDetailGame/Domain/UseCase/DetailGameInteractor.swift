@@ -10,9 +10,9 @@ import GCCommon
 
 public protocol DetailGameUseCase {
     func getGameDetail(gameId: Int) -> DetailGameResult
-    func executeAddGameToFavorites(_ model: AddFavoriteGameModel)
+    func executeAddGameToFavorites(_ model: FavoriteGameModel)
     func executeRemoveFavoriteGame(byID id: Int)
-    func executeAddActivityLog(_ model: AddActivityLogModel)
+    func executeAddActivityLog(_ model: ActivityLogModel)
     func isFavoriteGameExist(id: Int) -> Bool
 }
 
@@ -28,7 +28,7 @@ public class DetailGameInteractor: @preconcurrency DetailGameUseCase {
     }
     
     @MainActor
-    public func executeAddGameToFavorites(_ model: AddFavoriteGameModel) {
+    public func executeAddGameToFavorites(_ model: FavoriteGameModel) {
         repository.addGameToFavorite(model)
     }
     
@@ -38,7 +38,7 @@ public class DetailGameInteractor: @preconcurrency DetailGameUseCase {
     }
     
     @MainActor
-    public func executeAddActivityLog(_ model: AddActivityLogModel) {
+    public func executeAddActivityLog(_ model: ActivityLogModel) {
         repository.createActivityLog(model)
     }
     

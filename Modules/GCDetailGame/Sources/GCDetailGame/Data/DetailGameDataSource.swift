@@ -9,14 +9,14 @@ import Foundation
 import Alamofire
 import Combine
 
-import GCAPI
+import Modularization_API_Package
 import GCCommon
 
 public protocol DetailGameDataSourceProtocol {
     func fetchGameById(id: Int) -> AnyPublisher<DetailGameResponse, Error>
-    func executeAddGameToFavorites(_ model: AddFavoriteGameModel)
+    func executeAddGameToFavorites(_ model: FavoriteGameModel)
     func executeRemoveFavoriteGame(byID id: Int)
-    func executeAddActivityLog(_ model: AddActivityLogModel)
+    func executeAddActivityLog(_ model: ActivityLogModel)
     func isFavoriteGameExist(id: Int) -> Bool
 }
 
@@ -56,8 +56,17 @@ extension DetailGameDataSource: @preconcurrency DetailGameDataSourceProtocol {
     }
     
     @MainActor
-    public func executeAddGameToFavorites(_ model: AddFavoriteGameModel) {
-        return CoreDataManager.shared.addFavoriteGame(model: model)
+    public func executeAddGameToFavorites(_ model: FavoriteGameModel) {
+        let addFavGameModel = AddFavoriteGameModel(
+            id: model.id,
+            name: model.name,
+            released: model.released,
+            backgroundImage: model.backgroundImage,
+            rating: model.rating,
+            genres: model.genres
+        )
+        
+        return CoreDataManager.shared.addFavoriteGame(model: addFavGameModel)
     }
     
     @MainActor
@@ -66,8 +75,16 @@ extension DetailGameDataSource: @preconcurrency DetailGameDataSourceProtocol {
     }
     
     @MainActor
-    public func executeAddActivityLog(_ model: AddActivityLogModel) {
-        return CoreDataManager.shared.addActivityLog(model: model)
+    public func executeAddActivityLog(_ model: ActivityLogModel) {
+        let addActivityModel = AddActivityLogModel(
+            id: model.id,
+            gameImage: model.gameImage,
+            activityStatus: model.activityStatus,
+            gameTitle: model.gameTitle,
+            date: model.date
+        )
+        
+        return CoreDataManager.shared.addActivityLog(model: addActivityModel)
     }
     
     @MainActor

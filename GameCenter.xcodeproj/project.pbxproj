@@ -217,11 +217,10 @@
 			mainGroup = 368084D026CA3BCF007D7A8B;
 			packageReferences = (
 				36739F7E2D0BDD35003BAA0F /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
-				3674FDA32D0C365B00964B3C /* XCLocalSwiftPackageReference "Modules/GCAPI" */,
-				36835B532D0C396A0057C389 /* XCLocalSwiftPackageReference "Modules/GCCommon" */,
-				3656E5772D0D18A900DEFAF3 /* XCLocalSwiftPackageReference "Modules/GCGames" */,
-				36B851502D0D1A5500E09BFC /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */,
-				36B851512D0D1B7700E09BFC /* XCLocalSwiftPackageReference "Modules/GCProfile" */,
+				363C5E0A2D100BA40023EC97 /* XCLocalSwiftPackageReference "Modules/GCCommon" */,
+				363C5E0B2D100BB20023EC97 /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */,
+				363C5E0C2D100BC80023EC97 /* XCLocalSwiftPackageReference "Modules/GCGames" */,
+				363C5E0D2D100BE20023EC97 /* XCLocalSwiftPackageReference "Modules/GCProfile" */,
 			);
 			productRefGroup = 368084DA26CA3BCF007D7A8B /* Products */;
 			projectDirPath = "";
@@ -564,23 +563,19 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		3656E5772D0D18A900DEFAF3 /* XCLocalSwiftPackageReference "Modules/GCGames" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/GCGames;
-		};
-		3674FDA32D0C365B00964B3C /* XCLocalSwiftPackageReference "Modules/GCAPI" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/GCAPI;
-		};
-		36835B532D0C396A0057C389 /* XCLocalSwiftPackageReference "Modules/GCCommon" */ = {
+		363C5E0A2D100BA40023EC97 /* XCLocalSwiftPackageReference "Modules/GCCommon" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Modules/GCCommon;
 		};
-		36B851502D0D1A5500E09BFC /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */ = {
+		363C5E0B2D100BB20023EC97 /* XCLocalSwiftPackageReference "Modules/GCDetailGame" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Modules/GCDetailGame;
 		};
-		36B851512D0D1B7700E09BFC /* XCLocalSwiftPackageReference "Modules/GCProfile" */ = {
+		363C5E0C2D100BC80023EC97 /* XCLocalSwiftPackageReference "Modules/GCGames" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/GCGames;
+		};
+		363C5E0D2D100BE20023EC97 /* XCLocalSwiftPackageReference "Modules/GCProfile" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Modules/GCProfile;
 		};

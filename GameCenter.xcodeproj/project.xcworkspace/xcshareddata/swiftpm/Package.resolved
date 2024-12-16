@@ -1,5 +1,5 @@
 {
-  "originHash" : "3ae74263c0604d532bb7482fcfa201d3af03e0e8343f72c56ab21ddaae7ceb77",
+  "originHash" : "169e61bf40acd65a9e7aef0231c74ccfa41d7336e78b21a629fe1914cdabb01c",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "b842598f1295f3ffa1475b1580672d1fe5b83580",
         "version" : "4.5.0"
+      }
+    },
+    {
+      "identity" : "modularization-api-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Stevenlee12/Modularization-API-Package.git",
+      "state" : {
+        "revision" : "9213ecffbd45717255faf7fe95617eee6ebd8822",
+        "version" : "1.0.0"
       }
     },
     {

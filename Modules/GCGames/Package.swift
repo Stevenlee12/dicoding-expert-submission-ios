@@ -13,8 +13,8 @@ let package = Package(
             targets: ["GCGames"])
     ],
     dependencies: [
-        .package(path: "../GCAPI"),
         .package(path: "../GCCommon"),
+        .package(url: "https://github.com/Stevenlee12/Modularization-API-Package.git", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.4.0"))
     ],
     targets: [
@@ -23,8 +23,8 @@ let package = Package(
         .target(
             name: "GCGames",
             dependencies: [
-                "GCAPI",
                 "GCCommon",
+                .product(name: "Modularization-API-Package", package: "Modularization-API-Package"),
                 .product(name: "Alamofire", package: "Alamofire")
             ]
         ),

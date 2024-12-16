@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import Combine
 
-import GCAPI
+import Modularization_API_Package
 import GCCommon
 
 public protocol GameDataSourceProtocol {
