@@ -56,9 +56,8 @@ extension GameDataSource: @preconcurrency GameDataSourceProtocol {
     public func searchGames(matching searchQuery: String?) -> AnyPublisher<GamesResponse, Error> {
         return Future<GamesResponse, Error> { completion in
             if var urlComponent = URLComponents(string: Endpoints.Get.searchGames(query: searchQuery).url) {
-                urlComponent.queryItems = [
-                    URLQueryItem(name: "key", value: API.apiKey)
-                ]
+                urlComponent.queryItems?.append(URLQueryItem(name: "key", value: API.apiKey))
+                
                 if let url = urlComponent.url {
                     let decoder = JSONDecoder()
                     
